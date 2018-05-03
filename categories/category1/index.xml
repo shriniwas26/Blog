@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on My New Hugo Site</title>
-    <link>/post/</link>
-    <description>Recent content in Posts on My New Hugo Site</description>
+    <title>Category1 on My New Hugo Site</title>
+    <link>/categories/category1/</link>
+    <description>Recent content in Category1 on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 03 May 2018 11:29:50 +0200</lastBuildDate>
     
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/category1/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,15 +20,6 @@
       <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>First post abcd</title>
-      <link>/post/articletitle/</link>
-      <pubDate>Thu, 03 May 2018 03:40:20 +0200</pubDate>
-      
-      <guid>/post/articletitle/</guid>
-      <description></description>
     </item>
     
   </channel>

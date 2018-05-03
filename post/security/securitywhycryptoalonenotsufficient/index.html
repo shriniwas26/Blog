@@ -10,7 +10,9 @@
   
   
   <meta name="author" content="Shriniwas" />
-  <meta name="description" content="" />
+  <meta name="description" content="Cut out summary from your post content here.
+
+" />
 
 
 
@@ -19,7 +21,7 @@
 <meta name="generator" content="Hugo 0.40.2" />
 
 
-<link rel="canonical" href="/post/articletitle/" />
+<link rel="canonical" href="/post/security/securitywhycryptoalonenotsufficient/" />
 <link rel="alternative" href="/index.xml" title="My New Hugo Site" type="application/atom+xml" />
 
 <link href="https://cdn.bootcss.com/semantic-ui/2.2.14/semantic.min.css" rel="stylesheet" />
@@ -53,17 +55,91 @@
       </a>
       <header>
         <h1 class="ui header">
-          First post abcd
-          <div class="sub header">@ Shriniwas · May 3, 2018 · 0 min read · Update at May 3, 2018</div>
+          Why crypto alone is not sufficient
+          <div class="sub header">@ Shriniwas · May 3, 2018 · 3 min read · Update at May 3, 2018</div>
         </h1>
       </header>
-      <article class="post-content" style="margin-top: 2rem; font-size: 1.4rem;"></article>
+      <article class="post-content" style="margin-top: 2rem; font-size: 1.4rem;"><p>Cut out summary from your post content here.</p>
+
+<p></p>
+
+<p>Cyber security in this connected world is often not as simple as it seems. So going step-by-step, the questions around security can be grouped as:</p>
+
+<ul>
+<li><p><strong>Secrecy</strong> (or Confidentiality)</p>
+
+<ul>
+<li>Who can read my messages?</li>
+<li>Only the intended recipient, somebody else, or everyone?</li>
+</ul></li>
+
+<li><p><strong>Authenticity</strong></p>
+
+<ul>
+<li>If I think I am talking to Alice, is she really Alice?</li>
+<li>How do we establish an identity?</li>
+</ul></li>
+
+<li><p><strong>Integrity</strong></p>
+
+<ul>
+<li>Who can write, modify or generate information?</li>
+</ul></li>
+
+<li><p><strong>Non-repudiation</strong></p>
+
+<ul>
+<li>Can I deny my actions? e.g. that I made a transaction.</li>
+<li>Can I deny that I received your message?</li>
+</ul></li>
+
+<li><p><strong>Availability</strong></p>
+
+<ul>
+<li>Are resources available when required?</li>
+<li>Despite attack attempts, will the system remain available for use?</li>
+</ul></li>
+</ul>
+
+<p>Hold on to the questions for a while. Let’s take a quick detour and see what is often claimed about secure systems, i.e. encryption or crypto is sufficient for security. A product/website with an “encrypted” symbol sounds assuring, falsely so.</p>
+
+<p><strong><em>But why is encryption not sufficient?</em></strong></p>
+
+<!-- <img style="float: left;" src="https://c7.alamy.com/comp/C950MA/remains-of-stole-bicycle-front-wheel-only-locked-to-bike-rack-bike-C950MA.jpg"> -->
+
+<!-- ![alt-text]( "Logo Title Text 1") -->
+
+<p>Remains of stole bicycle: front wheel only locked to bike rack, bike removed from front wheel and stolen Stock Photo
+Perfect bike lock, but used incorrectly.</p>
+
+<p>For example, let’s consider a simplified example of net-banking.  Let Alice(A) be a client and Bob(B) be the bank. She does so by sending a message encrypted with Bob’s public key, using public-key encryption, ensuring that only Bob will be able to make sense of the message contents.</p>
+
+<pre><code>A -&gt; B : encrypted( “Send $100 from my account to David’s account” )
+</code></pre>
+
+<p>Now, let’s assume there is an adversary Charlie(C). He is eavesdropping on this exchange. Though he cannot make sense of the message, as it is encrypted with Bob’s public key, he can indeed store the message and then re-send it(posing as Alice) whenever he wants.</p>
+
+<pre><code>A -&gt; C : encrypted( &quot;Send $100 from my account to David’s account&quot;)
+
+C -&gt; B : encrypted( &quot;Send $100 from my account to David’s account&quot;)
+</code></pre>
+
+<p>Now after a while,</p>
+
+<pre><code>C -&gt; B : encrypted( “Send $100 from my account to David’s account&quot;)
+</code></pre>
+
+<p>Of course, the last step can be performed n number of times till Alice goes bankrupt and beyond.</p>
+
+<p>So the net effect of this exchange is that Alice sends $200 and not $100 as intended. In this case, even if the crypto works well, security was compromised. This is often the result when the protocols are flawed.</p>
+
+<p>So with a simple example, we see that crypto is not sufficient, of course, there are many more attack scenarios where crypto is either insufficient or just irrelevant. I’ll try to document those in another blog post.</p></article>
     </section>
 
     <footer class="ui secondary attached segment dream-tags">
       
       
-      <a class="ui label" href="/tags/random" title="random">random</a>
+      <a class="ui label" href="/tags/security" title="security">security</a>
       
       
     </footer>
